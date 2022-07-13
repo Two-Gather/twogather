@@ -25,19 +25,19 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   const [alertMsg, setAlertMsg] = useState("")
 
-  // const postUser = () => {
-  //   const data = {
-  //       name : 'name',
-  //       age : 23
-  //   }
-  //   axios.post("http://localhost:8080/post", data)
-  //       .then((response)=> {
-  //           console.log(response)
-  //       })
-  //       .catch((error)=> {
-  //           console.log(error)
-  //       })
-  // }
+  const postUser = () => {
+    const data = {
+        name : 'name',
+        age : 23
+    }
+    axios.post("http://localhost:8080/post", data)
+        .then((response)=> {
+            console.log(response)
+        })
+        .catch((error)=> {
+            console.log(error)
+        })
+  }
 
 
   const handleLogin = (e) => {
@@ -52,7 +52,7 @@ function LoginForm() {
 
 
       setAlertMsg("");
-      // postUser();
+  
 
     }
 
