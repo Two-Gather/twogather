@@ -1,16 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { validateEmail, useScript } from "../assets/utils/UsefulFunction";
-import { login } from "../slices/UserSlice";
+import { validateEmail, validatePassword } from "../assets/utils/UsefulFunction";
+import userSlice, {login} from "../slices/UserSlice";
+import axios from 'axios'
 
 import styled from "styled-components";
 import {
   Container,
   ContentsDiv,
   FormDiv,
-  FormTitle,
+  PageTitle,
   UserBtn,
 } from "../components/register/UserForm";
 
@@ -18,29 +19,52 @@ function LoginForm() {
   const user = useSelector((store) => store.user);
 
   const dispatch = useDispatch();
-
-  const navigate = useNavigate();
   const params = useParams();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [alertMsg, setAlertMsg] = useState("")
 
-  const handleLogin = () => {
-    setEmail("");
-    setPassword("");
+  // const postUser = () => {
+  //   const data = {
+  //       name : 'name',
+  //       age : 23
+  //   }
+  //   axios.post("http://localhost:8080/post", data)
+  //       .then((response)=> {
+  //           console.log(response)
+  //       })
+  //       .catch((error)=> {
+  //           console.log(error)
+  //       })
+  // }
 
-    dispatch(
-      login({
-        email: email,
-      })
-    );
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if(email==="") setAlertMsg("아이디를 입력해 주세요.");
+    else if(password==="") setAlertMsg("비밀번호를 입력해 주세요.");
+    else if(!validateEmail(email)) setAlertMsg("이메일 형식이 올바르지 않습니다.");
+    
+    else {
+
+
+
+      setAlertMsg("");
+      // postUser();
+
+    }
+
+    console.log(user);
+    
   };
 
   return (
     <Container>
       <FormDiv>
         <ContentsDiv>
-          <FormTitle>로그인</FormTitle>
+          <PageTitle>로그인</PageTitle>
           <LoginDiv className="login-form">
             <LoginInputDiv>
               <input
@@ -58,8 +82,10 @@ function LoginForm() {
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
             </LoginInputDiv>
-            <LoginButton onClick={() => handleLogin()}>LOGIN</LoginButton>
+            <LoginButton onClick={handleLogin}>LOGIN</LoginButton>
           </LoginDiv>
+          <AlertMsg><span>{alertMsg}</span></AlertMsg>
+
 
           <SocialLoginDiv>
             <SocialLoginBtn className="kakao-login">
@@ -76,11 +102,7 @@ function LoginForm() {
             <tr>
               <QuestionTD>회원이 아니신가요?</QuestionTD>
               <LinkTD>
-                <a
-                  onClick={() => {
-                    navigate("/register/user");
-                  }}
-                >
+                <a href="/register/user">
                   회원가입
                 </a>
               </LinkTD>
@@ -99,7 +121,8 @@ function LoginForm() {
 const LoginDiv = styled.form`
   display: flex;
   flex-direction: row;
-  margin: 2rem 1rem 0;
+  margin: 0 5rem;
+  
 
   input {
     width: 11rem;
@@ -129,6 +152,15 @@ const LoginButton = styled.button`
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
   }
 `;
+
+const AlertMsg = styled.div`
+  margin: 0 6rem;
+  text-align: left;
+  span {
+    font-size: 0.5rem;
+    color: red;
+  }
+`
 
 const SocialLoginDiv = styled.div`
   display: flex;

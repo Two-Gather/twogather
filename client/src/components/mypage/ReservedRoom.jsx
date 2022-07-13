@@ -14,14 +14,13 @@ function ReservedRoom() {
       </InfoDiv>
       <EditDiv>
         <a>예약취소</a>
-        <a>리뷰작성</a>
+        <a href='/myPage/addQna'>리뷰작성</a>
       </EditDiv>
     </RoomDiv>
   );
 }
 
 const RoomDiv = styled.div`
-  margin: 0 15vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,10 +38,10 @@ const InfoDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 60vw;
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
-
   }
 `;
 const RoomImg = styled.img`
@@ -62,7 +61,7 @@ const InfoTag = styled.p`
 `;
 
 const EditDiv =styled.div`
-
+  text-algin: left;
   a {
     text-decoration: underline;
     padding: 0;

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 
 function MyProfile() {
-
+  const user = useSelector((state) => state.user);
 
   // 로그인이 안되어 있을 경우
   return (
@@ -14,14 +14,14 @@ function MyProfile() {
         <ProfileImgEditBtn>프로필 수정</ProfileImgEditBtn>
       </ProfileImgDiv>
       <ProfileInfo>
-        <tr> <Nickname colSpan='2'> nickname </Nickname>  </tr>
+        <tr> <Nickname colSpan='2'> {user.nickname} </Nickname>  </tr>
         <tr>
           <InfoTag>이메일</InfoTag>
-          <InfoTD> email </InfoTD>
+          <InfoTD> {user.email} </InfoTD>
         </tr>
         <tr>
           <InfoTag>비밀번호</InfoTag>
-          <InfoTD><a>비밀번호 변경</a></InfoTD>
+          <InfoTD><a href="/">비밀번호 변경</a></InfoTD>
         </tr>
         <tr>
           <InfoTag>소셜 로그인 연동</InfoTag>
