@@ -1,15 +1,41 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./Store";
+import Store from "./Store";
+import styled from "styled-components";
+import ScrollToTop from "./components/ScrollToTop";
+import LoginForm from "./pages/LoginForm";
+import RegisterForm from "./pages/RegisterForm";
+import MyPage from "./pages/MyPage";
+// import AddReview
+import Notice from "./pages/Notice";
+import AddNotice from "./pages/AddNotice";
+import AdminHome from "./pages/AdminHome";
+import AdminUserList from "./pages/AdminUserList";
+import AdminBookList from "./pages/AdminBookList";
+import AdminBookDetail from "./pages/AdminBookDetail";
+import HostHome from "./pages/HostHome";
+// import AddHost
+// import AddSpace
+import HostBookList from "./pages/HostBookList";
+import HostSpaceList from "./pages/hostPage/HostSpaceList";
+import HostUpdateSpace from "./pages/HostUpdateSpace";
+
+import ProductList from "./pages/ProductList";
+import Detail from "./pages/Detail";
+import Book from "./pages/Book";
+import Home from "./pages/Home";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        {/* <BrowserRouter>
-          <Routes>
+    <Provider store={Store}>
+      <div className="App" style={{ overflowX: "hidden" }}>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Header></Header>
+          {/* <Routes>
             <Route path="/login" element={<LoginForm />} />
             <Route path="/register/:userType" element={<RegisterForm />} />
             <Route path="/myPage" element={<MyPage />} />
@@ -39,8 +65,9 @@ function App() {
 
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter> */}
+          </Routes> */}
+          <Footer></Footer>
+        </BrowserRouter>
       </div>
     </Provider>
   );

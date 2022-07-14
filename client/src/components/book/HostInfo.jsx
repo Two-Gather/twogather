@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-PostBookInfo.defaultProps = {
+HostInfo.defaultProps = {
   placeName: "스튜디오 709",
   hostName: "홍길동",
   businessNum: "123-45-67890",
@@ -9,7 +9,7 @@ PostBookInfo.defaultProps = {
   hostEmail: "host@naver.com",
 };
 
-export default function PostBookInfo(props) {
+export default function HostInfo(props) {
   return (
     <div style={{ width: "100%" }}>
       <Container>

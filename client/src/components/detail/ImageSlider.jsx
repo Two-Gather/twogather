@@ -33,7 +33,7 @@ export default function ImageSlider({ images }) {
     centerMode: true,
     centerPadding: "0px",
   };
-  console.log(images);
+
   return (
     <Container>
       <div>

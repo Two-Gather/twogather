@@ -51,9 +51,9 @@ function Chart() {
   ];
 
   return (
-    <>
+    <Box>
       <Title>일별 매출 수</Title>
-      <ResponsiveContainer width={"100%"} height={"80%"}>
+      <ResponsiveContainer width={"100%"} height={"100%"}>
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name"></XAxis>
@@ -64,7 +64,7 @@ function Chart() {
           <Bar dataKey="uv" fill="#82ca9d" />
         </BarChart>
       </ResponsiveContainer>
-    </>
+    </Box>
   );
 }
 
@@ -72,4 +72,9 @@ const Title = styled.span`
   font-size: 1.2rem;
 `;
 
+const Box = styled.div`
+  z-index: 1000;
+  width: 100%;
+  height: 500px;
+`;
 export default Chart;

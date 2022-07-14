@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import StripeLayout from "../components/StripeLayout";
-import AdminBookDetail from "./AdminBookDetail";
-function AdminBookList() {
+function HostBookList() {
   const data = [
     {
       booker: "강예정",
@@ -51,9 +50,9 @@ function AdminBookList() {
     "예약시간",
     "관리",
   ];
-  const mainTitle = "전체예약내역";
+  const mainTitle = "미지미지룸";
+  const title = "예약내역";
   const columnTemplete = "1fr 2fr 1.2fr 1.2fr 2fr 1fr 1.2fr";
-  const title = "";
 
   return (
     <>
@@ -67,6 +66,8 @@ function AdminBookList() {
       <StripeLayout
         datas={data}
         headers={headers}
+        mainTitle={mainTitle}
+        title={title}
         columnTemplete={columnTemplete}
         keys={keys}
         listName="BOOK"
@@ -74,7 +75,8 @@ function AdminBookList() {
     </>
   );
 }
-export default AdminBookList;
+
+export default HostBookList;
 
 const ReservationHeader = styled.div`
   margin: 0 auto;
@@ -95,4 +97,9 @@ const MainTitle = styled.span`
   font-size: 1.8rem;
   font-weight: 700;
   color: #8daef2;
+`;
+
+const BookBox = styled.div`
+  width: 80%;
+  height: 80%;
 `;

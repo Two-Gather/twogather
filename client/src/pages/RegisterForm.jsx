@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {  useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
-import { Container, ContentsDiv, FormDiv, FormTitle, UserBtn, Line } from "../components/UserForm";
+import { Container, ContentsDiv, FormDiv, FormTitle, UserBtn, Line } from "../components/register/UserForm";
 import Register from "../components/register/Register";
 
 function RegisterForm() {

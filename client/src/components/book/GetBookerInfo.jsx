@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function GetBookInfo() {
+export default function GetBookerInfo() {
   return (
     <Container>
       <Header>
@@ -17,12 +17,12 @@ export default function GetBookInfo() {
         </Content>
         <Content>
           <label for="inputPhone">
-            <span style={{ color: "red" }}>*</span> 연락처 (숫자만 입력) :
+            <span style={{ color: "red" }}>*</span> 연락처 :
           </label>
           <Input
             type="number"
             id="inputPhone"
-            placeholder="01012345678"
+            placeholder="숫자만 입력. ex)01012345678"
           ></Input>
         </Content>
         <Content>
@@ -62,7 +62,6 @@ const Container = styled.div`
 `;
 
 const Header = styled.div`
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -89,7 +88,7 @@ const Input = styled.input`
   background-color: #f6f6f6;
   border: none;
   padding: 5px;
-  width: 80%;
+  width: 70%;
 
   &:focus {
     outline: red;

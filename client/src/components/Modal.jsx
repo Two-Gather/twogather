@@ -64,7 +64,7 @@ const Button = styled.button`
   background: #a8c1e8;
   padding: 5px;
   border: none;
-
+  transition: 0.3s;
   &:hover {
     box-shadow: 2px 2px 5px -1px #a6a9b6;
   }

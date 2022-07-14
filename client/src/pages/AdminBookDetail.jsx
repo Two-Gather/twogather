@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import GetBookerInfo from "../components/book/GetBookerInfo";
 import HostInfo from "../components/book/HostInfo";
 import BookInfo from "../components/book/BookInfo";
+import PostBookerInfo from "../components/book/PostBookerInfo";
 import ToTop from "../components/ToTop";
 
 export default function Book() {
   return (
     <FullContainer>
-      <GetBookerInfo />
-      <HostInfo />
       <BookInfo />
-      <Button>예약 완료</Button>
+      <PostBookerInfo />
+      <HostInfo />
+      <Button>취소하기</Button>
       <ToTop />
     </FullContainer>
   );
@@ -39,5 +39,6 @@ const Button = styled.button`
 
   &:hover {
     box-shadow: 2px 2px 5px -1px #a6a9b6;
+    transition: 0.3s;
   }
 `;

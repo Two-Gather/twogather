@@ -3,7 +3,7 @@ import { useDaumPostcodePopup } from "react-daum-postcode";
 import styled from "styled-components";
 const PostcodePopup = () => {
   const open = useDaumPostcodePopup();
-  
+
   const [state, setState] = useState({
     myFullAddress: "",
     myPersonalAddress: "",
@@ -46,9 +46,11 @@ const PostcodePopup = () => {
       <StyledInput
         className="postNum"
         placeholder={state.myZoneCode}
+        width="100%"
       ></StyledInput>
-      <StyledInput placeholder={state.myFullAddress}></StyledInput>
+      <StyledInput width="100%" placeholder={state.myFullAddress}></StyledInput>
       <StyledInput
+        width="100%"
         onChange={(e) => {
           setState({
             ...state,
@@ -80,29 +82,26 @@ const ButtonContainer = styled.div`
 const SmallButton = styled.button`
   margin: 0 0;
   width: 200px;
-  height: 50px;
-  padding: 10px;
+  height: 40px;
   background-color: ${(props) => props.backGroundColor};
   color: ${(props) => props.color};
   cursor: pointer;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
   :hover {
     background-color: black;
   }
 `;
 
-const InputBox = styled.div`
-  margin: 10px 0px 10px 0;
-  width: 100%;
-`;
 const StyledInput = styled.input`
-  maxlength: 100;
-  width: 100%;
+  width: ${(props) => props.width};
   height: 25px;
-  padding: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
   border: 1px solid lightgrey;
-  margin-bottom: 8px;
   outline-color: #8daef2;
   border-radius: 4px;
 
@@ -110,4 +109,5 @@ const StyledInput = styled.input`
     width: 50%;
   }
 `;
+
 export default PostcodePopup;

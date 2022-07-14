@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import ReservedRoom from "./ReservedRoom";
-
+import Pagination from "../Pagination";
 
 function MyReservation() {
-
+    const total_page = 10;
+    const limit_page = 5;
+    const page_number = 0 ;
+    const posts_per_page = 5; 
 
     return(
         <ReservationDiv>
@@ -11,7 +14,7 @@ function MyReservation() {
             <ReservationTable>
                 <ReservedRoom></ReservedRoom>
             </ReservationTable>
-        
+            <Pagination total={total_page} limit={limit_page} page={page_number} setPage={posts_per_page}></Pagination>
         </ReservationDiv>       
     );
 }
@@ -36,7 +39,9 @@ const ReservationDiv = styled.div`
 
 
 const ReservationTable = styled.table`
-
+    div {
+    border-bottom: #BBD3F2;
+    }
 `
 
 

@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import ImageSlider from "../components/detail/ImageSlider";
 import Map from "../components/detail/Map";
 import SelectRoom from "../components/detail/SelectRoom";
-import { MyDatePicker, MyTimePicker } from "../components/detail/DatePicker";
+import { MyDatePicker } from "../components/detail/DatePicker";
 import ToTop from "../components/ToTop";
+import axios from "axios";
 
 Detail.defaultProps = {
   title: "스튜디오 709",
@@ -69,6 +70,9 @@ function changeTab(props) {
 
 export default function Detail({ title, hashTag, contents }) {
   const [person, setPerson] = useState(0);
+
+  // const req = await axios.get("/dummyBook.json");
+  // console.log(req.data.books);
 
   return (
     <FullContainer>
@@ -140,8 +144,7 @@ export default function Detail({ title, hashTag, contents }) {
         <RightContainer>
           <SelectRoom />
           <MyDatePicker />
-          <MyTimePicker />
-          <Guide>*최소 예약시간은 1시간입니다.</Guide>
+
           <Personnel>
             예약 인원:
             <input
@@ -266,12 +269,6 @@ const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const Guide = styled.div`
-  width: 100%;
-  font-size: 0.7rem;
-  color: red;
 `;
 
 const Personnel = styled.div`

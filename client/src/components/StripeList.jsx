@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { RiEdit2Fill } from "react-icons/ri";
-import ListItem from "./ListItem";
+import ListItem from "./StripeListItem";
 import StripeLayout from "./StripeLayout";
 function StripeList({ data, mainTitle }) {
   const mockHeader = [

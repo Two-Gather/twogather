@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import { useSelector } from 'react-redux';
+
 
 function MyProfile() {
+
+
+  // 로그인이 안되어 있을 경우
   return (
 
     <ProfileDiv>
@@ -9,10 +14,10 @@ function MyProfile() {
         <ProfileImgEditBtn>프로필 수정</ProfileImgEditBtn>
       </ProfileImgDiv>
       <ProfileInfo>
-        <tr> <Nickname colSpan='2'>닉네임</Nickname>  </tr>
+        <tr> <Nickname colSpan='2'> nickname </Nickname>  </tr>
         <tr>
           <InfoTag>이메일</InfoTag>
-          <InfoTD>duck@naver.com</InfoTD>
+          <InfoTD> email </InfoTD>
         </tr>
         <tr>
           <InfoTag>비밀번호</InfoTag>
@@ -21,14 +26,6 @@ function MyProfile() {
         <tr>
           <InfoTag>소셜 로그인 연동</InfoTag>
           <InfoTD>카카오</InfoTD>
-        </tr>
-        <tr>
-          <InfoTag>생년월일</InfoTag>
-          <InfoTD>2000.02.02</InfoTD>
-        </tr>
-        <tr>
-          <InfoTag>성별</InfoTag>
-          <InfoTD>여</InfoTD>
         </tr>
       </ProfileInfo>
     </ProfileDiv>

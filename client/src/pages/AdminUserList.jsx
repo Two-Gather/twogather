@@ -1,60 +1,50 @@
-import React, { useState } from "react";
 import styled from "styled-components";
+import StripeList from "../components/StripeList";
 import StripeLayout from "../components/StripeLayout";
-import AdminBookDetail from "./AdminBookDetail";
-function AdminBookList() {
+
+function AdminUserList() {
   const data = [
     {
-      booker: "강예정",
-      bookedRoom: "파티파티룸",
-      bookMembers: "5",
-      price: "5000",
+      nickname: "강예정",
+      email: "파티파티룸",
       phoneNumber: "010-3000-2000",
+      sns: "5000",
+      role: "admin",
       date: "1월18일",
-      modify: false,
+      block: false,
     },
     {
-      booker: "강예쩡",
-      bookedRoom: "파티파티룸",
-      bookMembers: "5",
-      price: "5000",
+      nickname: "강예정",
+      email: "파티파티룸",
       phoneNumber: "010-3000-2000",
+      sns: "5000",
+      role: "admin",
       date: "1월18일",
-      modify: false,
+      block: false,
     },
-
     {
-      booker: "탱구",
-      bookedRoom: "파티파티룸",
-      bookMembers: "5",
-      price: "5000",
+      nickname: "강예정",
+      email: "aa@aaa.com",
       phoneNumber: "010-3000-2000",
+      sns: "5000",
+      role: "admin",
       date: "1월18일",
-      modify: false,
+      block: false,
     },
-  ];
-
-  const keys = [
-    "booker",
-    "bookedRoom",
-    "bookMembers",
-    "price",
-    "phoneNumber",
-    "date",
   ];
   const headers = [
-    "예약자",
-    "예약방",
-    "예약인원",
-    "예약금액",
+    "닉네임",
+    "E-Mail",
     "전화번호",
-    "예약시간",
-    "관리",
+    "SNS",
+    "Role",
+    "가입날짜",
+    "차단",
   ];
-  const mainTitle = "전체예약내역";
-  const columnTemplete = "1fr 2fr 1.2fr 1.2fr 2fr 1fr 1.2fr";
+  const keys = ["nickname", "email", "phoneNumber", "sns", "role", "date"];
+  const mainTitle = "유저정보";
+  const columnTemplete = "1fr 2fr 1.5fr 1fr 1fr 1.5fr 1fr";
   const title = "";
-
   return (
     <>
       <ReservationHeader>
@@ -64,17 +54,19 @@ function AdminBookList() {
         </TitleName>
       </ReservationHeader>
 
+
       <StripeLayout
         datas={data}
         headers={headers}
         columnTemplete={columnTemplete}
         keys={keys}
-        listName="BOOK"
+        listName="USER"
       ></StripeLayout>
     </>
   );
 }
-export default AdminBookList;
+
+export default AdminUserList;
 
 const ReservationHeader = styled.div`
   margin: 0 auto;

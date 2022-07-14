@@ -1,0 +1,30 @@
+{
+  "books": [
+    {
+      "bookId": 1,
+      "roomId": 1,
+      "date": "2022-07-12",
+      "startTime": 10,
+      "endTime": 13,
+      "person": 4,
+      "bookerName": "홍길동",
+      "phone": "01011112222",
+      "email": "abc@naver.com",
+      "purpose": "촬영",
+      "request": ""
+    },
+    {
+      "bookId": 2,
+      "roomId": 1,
+      "date": "2022-07-12",
+      "startTime": 17,
+      "endTime": 19,
+      "person": 2,
+      "bookerName": "홍길동",
+      "phone": "01022223333",
+      "email": "abc@naver.com",
+      "purpose": "",
+      "request": ""
+    }
+  ]
+}

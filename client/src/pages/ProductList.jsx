@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Header from "../layout/Header";
 import Pagination from "../components/Pagination";
-import ProductCard from "../components/productCard";
+import ProductCard from "../components/ProductCard";
 import exImg1 from "../assets/images/ex1.png";
 import exImg2 from "../assets/images/ex2.png";
 
 const ex1 = [
   {
-    src: exImg1,
+    src: [exImg1, exImg2],
     tag: [
       "#강남모임공간",
       "#강남파티룸",
@@ -24,7 +23,7 @@ const ex1 = [
 ];
 const ex2 = [
   {
-    src: exImg2,
+    src: [exImg2, exImg1],
     tag: [
       "#강남모임공간",
       "#강남파티룸",
@@ -50,14 +49,16 @@ for (let i = 12; i < 24; i++) {
 const renderData = ({ offset, limit }) => {
   return exData
     .slice(offset, offset + limit)
-    .map((exData) => (
+    .map((exData, i) => (
       <ProductCard
+        key={i}
         src={exData.src}
         tag={exData.tag}
         title={exData.title}
         address={exData.address}
         price={exData.price}
         review={exData.review}
+        link={`/detail/1`}
       />
     ));
 };
@@ -76,7 +77,6 @@ export default function ProductList() {
   const offset = (page - 1) * limit;
   return (
     <div>
-      <Header />
       <BottomWrap>
         <SelectorWrap>
           <Selector about="카테고리" />
@@ -85,14 +85,13 @@ export default function ProductList() {
           <Selector about="필터 초기화" />
         </SelectorWrap>
         <ProductWrap>{renderData({ offset, limit })}</ProductWrap>
-        <div>
-          <Pagination
-            total={exData.length}
-            limit={limit}
-            page={page}
-            setPage={setPage}
-          />
-        </div>
+
+        <Pagination
+          total={exData.length}
+          limit={limit}
+          page={page}
+          setPage={setPage}
+        />
       </BottomWrap>
     </div>
   );
@@ -106,7 +105,7 @@ const ProductWrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 1vw;
+  gap: 2%;
 `;
 
 const SelectButton = styled.button`

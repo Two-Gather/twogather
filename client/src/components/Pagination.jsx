@@ -39,8 +39,8 @@ const Nav = styled.nav`
 const Button = styled.button`
   border: none;
   border-radius: 50%;
-  width: 2.5vw;
-  padding: 1%;
+  width: 3vw;
+  height: 3vw;
   margin: 0;
   font-size: 1rem;
   background-color: white;

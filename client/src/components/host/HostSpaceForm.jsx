@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
-import "../assets/styles/adminPage.css";
 import styled from "styled-components";
-import Postcode from "../components/adminComponents/Postcode";
-import PostcodePopup from "../components/adminComponents/PostcodePopup";
+import PostcodePopup from "../admin/PostcodePopup";
 
-function AddSpacePage() {
+export default function HostSpaceForm({ mode }) {
   const [imageSrc, setImageSrc] = useState("");
   const [detailImgs, setDatailImgs] = useState([]);
 
@@ -181,7 +179,7 @@ function AddSpacePage() {
             backGroundColor="#8daef2"
             color="white"
           >
-            등록취소
+            취소
           </StyledButton>
           <StyledButton
             className="inc"
@@ -191,7 +189,7 @@ function AddSpacePage() {
             name="register"
             className="register"
           >
-            공간등록
+            {mode === "UPDATE" ? "공간수정" : mode === "ADD" ? "공간등록" : ""}
           </StyledButton>
         </ButtonBox>
       </SpaceForm>
@@ -203,19 +201,18 @@ function AddSpacePage() {
 //중앙정렬
 
 const Main = styled.div`
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
+  margin: 0 15%;
   display: flex;
-
   justify-content: center;
   align-items: center;
+  height: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
 `;
 
 const SpaceForm = styled.form`
   margin-top: 100px;
+  margin: 0 10%;
   width: 100%;
   height: 100%;
 `;
@@ -231,15 +228,17 @@ const StyledLabel = styled.div`
 `;
 
 const StyledInput = styled.input`
-  maxlength: 100;
-  width: 100%;
+  width: ${(props) => props.width};
   height: 25px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid lightgrey;
   outline-color: #8daef2;
   border-radius: 4px;
-`;
 
+  & + & {
+    margin-left: 3%;
+  }
+`;
 const StyledTextArea = styled.textarea`
   width: 100%;
   resize: none;
@@ -251,11 +250,11 @@ const StyledTextArea = styled.textarea`
 `;
 
 const InputBox = styled.div`
-  padding: 10px;
-
+  display: flex;
+  align-items: start;
   text-align: start;
-  width: 80%;
-  margin: 0 auto;
+  flex-direction: column;
+  margin: 40px auto;
 `;
 
 const ImageInput = styled.input``;
@@ -283,21 +282,28 @@ const SubImageView = styled.div`
 `;
 
 const StyledButton = styled.button`
-  margin: 0 auto;
   width: 48%;
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
+
   border: none;
   border-radius: 10px;
   font-size: 1rem;
+
   background-color: ${(props) => props.backGroundColor};
   color: ${(props) => props.color};
+
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  transition-duration: 0.3s;
 
   :hover {
     background-color: black;
+  }
+  & + & {
+    margin-left: 20px;
   }
 `;
 
@@ -308,13 +314,12 @@ const Title = styled.h1`
 
 const ButtonBox = styled.div`
   margin: 0 auto;
-  margin-top: 30px;
-  padding: 10px;
-  width: 80%;
+  margin-top: 10%;
+
+  width: 100%;
   display: flex;
 `;
 
 const Hr = styled.hr`
   border: 2px #8daef2 solid;
 `;
-export default AddSpacePage;

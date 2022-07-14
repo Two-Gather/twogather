@@ -1,10 +1,9 @@
 import React, { useState, useRef } from "react";
-import "../assets/styles/adminPage.css";
 import styled from "styled-components";
-import Postcode from "../components/adminComponents/Postcode";
-import PostcodePopup from "../components/adminComponents/PostcodePopup";
+import Postcode from "../components/admin/Postcode";
+import PostcodePopup from "../components/admin/PostcodePopup";
 
-function AddHostPage() {
+function AddHost() {
   const [imageSrc, setImageSrc] = useState("");
   const [detailImgs, setDatailImgs] = useState([]);
 
@@ -53,7 +52,7 @@ function AddHostPage() {
           <StyledLabel>상호명</StyledLabel>
           <StyledInput
             type="text"
-            width={"50%"}
+            width={"40%"}
             name="businessName"
             value={hostInfo.businessName}
             onChange={handleChangeState}
@@ -65,7 +64,7 @@ function AddHostPage() {
           <StyledInput
             type="text"
             name="representativeName"
-            width={"50%"}
+            width={"40%"}
             value={hostInfo.representativeName}
             onChange={handleChangeState}
           ></StyledInput>
@@ -75,7 +74,7 @@ function AddHostPage() {
           <StyledLabel>사업자번호</StyledLabel>
           <StyledInput
             type="text"
-            width={"50%"}
+            width={"40%"}
             name="companyRegisNumber"
             value={hostInfo.companyRegisNumber}
             onChange={handleChangeState}
@@ -85,7 +84,7 @@ function AddHostPage() {
         <InputBox>
           <StyledLabel>연락처</StyledLabel>
           <StyledInput
-            width={"50%"}
+            width={"40%"}
             type="text"
             name="contactInfo"
             placeholder="숫자만 입력해 주세요"
@@ -97,7 +96,7 @@ function AddHostPage() {
         <InputBox>
           <StyledLabel>이메일</StyledLabel>
           <StyledInput
-            width={"50%"}
+            width={"40%"}
             type="email"
             name="email"
             value={hostInfo.email}
@@ -109,6 +108,7 @@ function AddHostPage() {
           <StyledLabel>계좌번호</StyledLabel>
           <div className="hostAccount">
             <StyledInput
+              className="account"
               width={"20%"}
               type="text"
               name="bankName"
@@ -117,14 +117,16 @@ function AddHostPage() {
               onChange={handleChangeState}
             ></StyledInput>
             <StyledInput
+              className="account"
               type="text"
               placeholder="계좌번호"
-              width={"45%"}
+              width={"40%"}
               name="bankAccount"
               value={hostInfo.bankAccountNum.accountNum}
               onChange={handleChangeState}
             ></StyledInput>
             <StyledInput
+              className="account"
               width={"20%"}
               placeholder="소유주"
               type="text"
@@ -193,20 +195,24 @@ const StyledLabel = styled.div`
 const StyledInput = styled.input`
   width: ${(props) => props.width};
   height: 25px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid lightgrey;
   outline-color: #8daef2;
   border-radius: 4px;
+
+  & + & {
+    margin-left: 3%;
+  }
 `;
 
 const InputBox = styled.div`
   display: flex;
-  justify-content: space-evenly;
+
   align-items: start;
   text-align: start;
   flex-direction: column;
   width: 100%;
-  margin: 50px auto;
+  margin: 40px auto;
 
   :nth-child(2) {
     margin-top: 0;
@@ -217,28 +223,28 @@ const InputBox = styled.div`
   }
 
   .hostAccount {
-    display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
   }
 `;
 
 const StyledButton = styled.button`
   width: 48%;
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
+
   border: none;
   border-radius: 10px;
   font-size: 1rem;
+
   background-color: ${(props) => props.backGroundColor};
   color: ${(props) => props.color};
+
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition-duration: 0.3s;
-  height: 4rem;
+
   :hover {
     background-color: black;
   }
@@ -264,4 +270,4 @@ const ButtonBox = styled.div`
 const Hr = styled.hr`
   border: 2px #8daef2 solid;
 `;
-export default AddHostPage;
+export default AddHost;

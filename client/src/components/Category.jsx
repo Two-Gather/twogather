@@ -55,6 +55,7 @@ const ButtonWrap = styled.button`
 const CategoryWrap = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 3.6vh;
 `;
 
 export default function Category() {

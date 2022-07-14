@@ -4,7 +4,7 @@ import { Logo } from "./Header.jsx";
 
 const FooterWrap = styled.div`
   background-color: #f2f2f2;
-  width: 100vw;
+  width: 100%;
   height: 35vh;
   span:nth-child(1) {
     position: relative;

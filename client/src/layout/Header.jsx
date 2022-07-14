@@ -113,7 +113,8 @@ const SearchWrap = styled.div`
 
 const HeaderWrap = styled.div`
   display: flex;
-  margin: 4vh 6vw;
+  max-width: 100%;
+  padding: 3% 6%;
 `;
 
 const RightWrap = styled.div`

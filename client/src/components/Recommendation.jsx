@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ProductCard from "./ProductCard";
-import exImg from "../assets/images/ex1.png";
+import exImg1 from "../assets/images/ex1.png";
+import exImg2 from "../assets/images/ex2.png";
 
 const exData = {
-  src: exImg,
+  src: [exImg1, exImg2],
   tag: [
     "#강남모임공간",
     "#강남파티룸",
@@ -29,13 +30,10 @@ const RecomWrap = styled.div`
 `;
 
 const CardWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
-  button {
-    & + button {
-      margin-left: 1vw;
-    }
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2%;
 `;
 
 export default function Recommendation() {
@@ -51,12 +49,12 @@ export default function Recommendation() {
       review: exData.review,
     });
   }
-  console.log(props);
 
   const rendering = () => {
-    const result = props.map((item) => {
+    const result = props.map((item, i) => {
       return (
         <ProductCard
+          key={i}
           className="recomCard"
           src={item.src}
           tag={item.tag}
@@ -64,17 +62,17 @@ export default function Recommendation() {
           address={item.address}
           price={item.price}
           review={item.review}
+          link={"/detail/1"}
         ></ProductCard>
       );
     });
     return result;
   };
 
-  console.log(rendering());
   return (
     <RecomWrap>
       <RecomTitle>오늘의 추천 공간</RecomTitle>
-      <CardWrap>{rendering()}</CardWrap>
+      <CardWrap className="card">{rendering()}</CardWrap>
     </RecomWrap>
   );
 }
