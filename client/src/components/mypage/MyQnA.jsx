@@ -13,7 +13,7 @@ function MyQnA() {
 
     return(
         <QnADiv>
-            <h3>Q&A</h3>
+            <h3>나의 질문</h3>
             <QnATable>
                 <QnATableHead>
                     <td className="space"> 공간정보 </td>
@@ -35,13 +35,11 @@ const QnADiv = styled.div`
   height: wrap-content;
   border: none;
   text-align: center;
-  margin: 3rem 0;
 
   h3 {
     text-align: left;
     font-size: 1.5rem;
     color: #8daef2;
-    margin: 0 15vw;
   }
 `;
 
@@ -49,13 +47,16 @@ const QnADiv = styled.div`
 
 const QnATable = styled.table`
     border-top: 2px;
-    margin: 0 15vw;
+    td {
+        padding: 0.5rem;
+    }
 `
 
 const QnATableHead = styled.thead`
     font-weight: bold;
-    background-color: #BBD3F2; 
-    opacity: 0.5;
+    background-color: #BBD3F288; 
+
+    
 `
 
 

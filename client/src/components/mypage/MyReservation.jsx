@@ -27,12 +27,12 @@ const ReservationDiv = styled.div`
   border: none;
   text-align: center;
   margin: 3rem 0;
-
+  
   h3 {
       text-align: left;
       font-size: 1.5rem;
       color: #8daef2;
-      margin: 0 15vw;
+
   }
 `;
 

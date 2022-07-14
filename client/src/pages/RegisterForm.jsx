@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {  useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
-import { Container, ContentsDiv, FormDiv, FormTitle, UserBtn, Line } from "../components/register/UserForm";
+import { Container, ContentsDiv, FormDiv, PageTitle, UserBtn, Line } from "../components/register/UserForm";
 import Register from "../components/register/Register";
 
 function RegisterForm() {
@@ -15,7 +15,7 @@ function RegisterForm() {
     <Container>
       
       <FormDiv>
-        <FormTitle>회원가입</FormTitle>
+        <PageTitle>회원가입</PageTitle>
         <ContentsDiv>
             <div>
               <UserBtn value="USER" onClick={()=> navigate('/register/user')} clicked={params.userType === 'user'}>

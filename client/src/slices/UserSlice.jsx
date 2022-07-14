@@ -1,10 +1,10 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 
 const initialState = {
   nickname: "",
   email: "",
-  useType: "user",    // user host admin
+  useType: "",    // user host admin
   isLoading: true,
 
 }
@@ -14,12 +14,10 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     login: (state, action) => {
-        state = action.payload
+      state = action.payload;
     }
-  },
-  extraReducers: {
-    // Extra reducer comes here
-  },
+  }
+
 })
 
 export const { login } = userSlice.actions;

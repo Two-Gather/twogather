@@ -10,8 +10,7 @@ export const FormDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-item: center;
-  position: absolute;
-  width: 20rem;
+  width: 30rem;
   top: 3rem;
   height: wrap-content;
   border: none;
@@ -22,16 +21,15 @@ export const ContentsDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-item: center;
-  position: absolute;
-  width: 20rem;
+  width: 30rem;
   height: wrap-content;
   border: 1px solid #bbd3f2;
   border-radius: 10px;
-  top: 5rem;
   text-align: center;
+  margin: 0 0 5rem 0;
 `;
 
-export const FormTitle = styled.div`
+export const PageTitle = styled.div`
   color: #bbd3f2;
   font-weight: bold;
   margin: 2rem;
