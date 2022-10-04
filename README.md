@@ -104,7 +104,7 @@
 
 
 ## 🧑‍💻 Figma 사진
-<img width="1187" alt="figma사진" src="https://user-images.githubusercontent.com/28006318/193760138-2ce2a78f-0235-4266-9191-b436f8a69c0a.png">
+<img width="700" alt="figma사진" src="https://user-images.githubusercontent.com/28006318/193760138-2ce2a78f-0235-4266-9191-b436f8a69c0a.png">
 
 ## 🧑‍💻 Figma 링크
 https://www.figma.com/file/11R0lkBAQmi4Pv2Js7fkUX/Twogather?node-id=0%3A1
@@ -119,4 +119,64 @@ https://www.figma.com/file/11R0lkBAQmi4Pv2Js7fkUX/Twogather?node-id=0%3A1
 
 ## 🧑‍💻 ERD
 ![erd](https://user-images.githubusercontent.com/28006318/193760576-1a64611b-4ab6-4fc0-884a-087e81ddc227.png)
+
+
+## 🧑‍💻 웹페이지 미리보기
+
+### 메인페이지
+<img width="700" alt="메인페이지1" src="https://user-images.githubusercontent.com/28006318/193761251-dab5a3a7-5468-4c8c-acb4-7472318e28d5.png">
+
+### 공간목록 조회페이지
+<img width="700" alt="메인페이지2" src="https://user-images.githubusercontent.com/28006318/193761282-661ef0fb-80fb-45bd-ac02-cb40cd4cb183.png">
+
+### 공간 상세 페이지
+<img width="700" alt="상세페이지1" src="https://user-images.githubusercontent.com/28006318/193761291-02d34b55-e4da-40a2-a817-dfae53b719d3.png">
+
+### 공간예약 페이지
+![공간예약페이지](https://user-images.githubusercontent.com/28006318/193761737-da3473dd-f5be-4e86-b069-b9c66b2de9b3.png)
+
+## 마이페이지
+<img width="700" alt="마이페이지" src="https://user-images.githubusercontent.com/28006318/193761751-a07d456e-336b-412e-b842-7685604f275f.png">
+
+## 이용후![이용후기 등록페이지](https://user-images.githubusercontent.com/28006318/193761770-b50545b0-ed2c-4911-95de-74ec2c6dcd89.png)
+기 등록 페이지
+
+<br>
+
+## Host 기능
+
+### 호스트 등록 페이지
+![호스트 등록 페이지](https://user-images.githubusercontent.com/28006318/193762219-eb4b7404-080c-4345-b549-e89df85c6c46.png)
+
+### 호스트 공간등록 페이지
+<img width="700" alt="호스트 공간 등록 페이지" src="https://user-images.githubusercontent.com/28006318/193762233-cd5d5206-99d6-4f91-869d-8e4546a83396.png">
+
+### 호스트 공간관리 페이지
+<img width="700" alt="호스트 공간관리 페이지" src="https://user-images.githubusercontent.com/28006318/193762328-51171d30-e47b-46e9-a6cf-62691d9d4f74.png">
+
+### 호스트 룸 등록하기 페이지
+<img width="700" alt="호스트 룸 등록하기" src="https://user-images.githubusercontent.com/28006318/193762368-af7f7563-d870-44c2-bdd9-3b8fbb981876.png">
+
+### 호스트 룸별 예약 관리 페이지
+![호스트 룸별 예약 관리 페이지](https://user-images.githubusercontent.com/28006318/193762438-7fce550e-d640-4273-9669-4f4afff35c87.png)
+
+### 예약 상세 내역 확인 및 관리
+![호스트 예약 상세 내역 및 관리](https://user-images.githubusercontent.com/28006318/193762451-dfdbdc95-932e-4d60-8f25-b5732c494408.png)
+
+
+<br>
+
+## Admin 기능
+
+### 유저 관리
+![유저관리](https://user-images.githubusercontent.com/28006318/193762766-0c0cab39-8b26-405b-bbfb-6abb9e16d9a8.png)
+
+### 공지사항
+![공지사항](https://user-images.githubusercontent.com/28006318/193762796-71844061-234b-42c0-b062-55b10a11aa6b.png)
+
+### Q&A 관리
+![Q A관리](https://user-images.githubusercontent.com/28006318/193762803-768f3a4b-19cc-4ff0-87cb-ebb96aca0c28.png)
+
+### 전체 예약 관리
+![전체 예약 관리](https://user-images.githubusercontent.com/28006318/193762852-dd04737e-c641-4eae-b9d5-04a667fe9657.png)
 
