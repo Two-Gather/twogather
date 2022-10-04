@@ -88,3 +88,35 @@
 | 남연진 |프론트엔드|로그인, 로그아웃, 회원가입, 마이페이지, 리뷰, Q&A|
 | 김태훈 | 백엔드 |EC2 MySQL 서버 생성 및 관리, 관계형 DB 모델링 및 ERD 작성, REST API 개발 및 Swagger 문서 작성, 인증/인가 구현, Slack Git 연동 등|
 | 장종원 | 백엔드 |EC2 Jenkins(CI&CD), DB 구축 및 REST API 개발, API Document(Swagger), AWS S3(lambda)|
+
+
+# 6. 프로젝트 구조도
+
+---
+
+## 🧑‍💻 로그인
+![로그인](https://user-images.githubusercontent.com/28006318/193759982-6c57d6d5-c2f5-4311-8015-7f0bea0691a6.png)
+
+
+## 🧑‍💻 예약 등록
+
+![공간 대여 (1)](https://user-images.githubusercontent.com/28006318/193760089-ab0d2a4d-ad4a-488f-854e-aa92ea721aa8.png)
+
+
+## 🧑‍💻 Figma 사진
+<img width="1187" alt="figma사진" src="https://user-images.githubusercontent.com/28006318/193760138-2ce2a78f-0235-4266-9191-b436f8a69c0a.png">
+
+## 🧑‍💻 Figma 링크
+https://www.figma.com/file/11R0lkBAQmi4Pv2Js7fkUX/Twogather?node-id=0%3A1
+
+#7. API명세서
+
+## 🧑‍💻 API명세서
+![api명세서](https://user-images.githubusercontent.com/28006318/193760322-bf437f43-55f4-4d7f-bb8d-17a3b847a2a0.png)
+
+## 🧑‍💻 아키텍처 구성도
+<img width="676" alt="아키텍쳐구성도" src="https://user-images.githubusercontent.com/28006318/193760501-c78f9ab7-3731-4b50-acf2-7e75091eefa7.png">
+
+## 🧑‍💻 ERD
+![erd](https://user-images.githubusercontent.com/28006318/193760576-1a64611b-4ab6-4fc0-884a-087e81ddc227.png)
+
